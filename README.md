@@ -10,11 +10,11 @@ To get help:
 
 MW.py -h
 
-To perform a simple matching using approximate (fast) maximum-weighted matching:
+To perform a simple matching using the simple (fast) approximate maximum-weighted matching:
 
 MW.py -i /path/to/input_dir -o /path/to/output_file -dmz 0.025 -drt 100 
 
-To perform a full matching using Kuhn-Munkres maximum-weighted matching:
+To perform a full matching using the (slow) Hungarian maximum-weighted matching:
 
 MW.py -i /path/to/input_dir -o /path/to/output_file -dmz 0.025 -drt 100 -exact_match
 
@@ -50,6 +50,8 @@ E.g.
     1	synthdata_0.csv	74	158.0938159725959	904.2641474422279
     1	synthdata_1.csv	70	158.09302110253617	878.1399446798514
 
+In this example, the two features with correspondence_id = 0 are matched together. Similarly, the last two peaks with correspondence_id = 1 are also matched together.
+
 ## Performance evaluation
 
-To make evaluation easy, calls to MW.py is wrapped within a Java pipeline that reads input files in various formats and computes performance measures (Precision, Recall, F1). This can be found at https://github.com/joewandy/phd-research
+To make evaluation easy, calls to MW.py is wrapped within a Java pipeline that reads input files in various formats and computes performance measures (Precision, Recall, F1) produced on the output produced by the script against some alignment ground truth. This pipeline can be found at https://github.com/joewandy/phd-research
