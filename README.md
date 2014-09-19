@@ -5,6 +5,18 @@ This page contains the supporting files for the paper *Incorporating peak groupi
 - **MW_alignment** contains the main peak alignment (matching) code for the proposed methods (MW/MWG/MWM) method. The implementation is done in Python, and the main executable script is MW.py.
 - **input_data** contains the dataset used in experiments to measure performance in the paper. Further explanation can be found inside that directory. 
 
+## Required libraries
+
+The program depends on the following Python library:
+
+- Numpy
+- Scipy
+- NetworkX
+
+In Ubuntu Linux, you can install them easily with the following commands:
+
+    sudo apt-get install python-numpy python-scipy python-networkx
+
 ## Example usage
 
 To get help:
