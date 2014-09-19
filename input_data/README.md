@@ -6,9 +6,9 @@ This directory contains the evaluation datasets used for experiments in the pape
 
 * **P1** and **P2** contains the proteomic datasets used in single-fraction and multiple-fractions experiments in the paper.
 * **M1** contains the metabolomic dataset used for the metabolomic experiment in the paper.
-* **glycomic** contains the glyomic dataset used for the glycomic experiment in the paper.
+* **glycomics** contains the glyomic dataset used for the glycomic experiment in the paper.
 
-**P1**, **P2** and **M1** were first introduced by Lange, et al. (2008), while **glycomic** comes from Tsai et al. (2013). We focus on pairwise alignment performance, so only the first two runs within each fraction of P2 were included for evaluation. For **M1** and **glycomic**, we extracted 30 random pairs of runs to be the training set and further 30 random pairs of runs to be the testing set. Parameters are optimised on the training set and performance evaluated on the testing set. 
+**P1**, **P2** and **M1** were first introduced by Lange, et al. (2008), while **glycomics** comes from Tsai et al. (2013). We focus on pairwise alignment performance, so only the first two runs within each fraction of P2 were included for evaluation. For **M1** and **glycomics**, we extracted 30 random pairs of runs to be the training set and further 30 random pairs of runs to be the testing set. Parameters are optimised on the training set and performance evaluated on the testing set. 
 
 ## Files selection for the M1 and glycomic datasets
 
@@ -31,7 +31,7 @@ Files in these directories are sorted alphabetically (in natural order) and inde
 				{9, 19},	{5, 20},	{12, 27},	{6, 10}, 	{19, 23}						
 		};
 
-The following lists the indices of files randomly selected in **glycomic** for training (parameter optimisation) and testing (performance evaluation) purposes.
+The following lists the indices of files randomly selected in **glycomics** for training (parameter optimisation) and testing (performance evaluation) purposes.
 
 		int[][] trainingIndices = { 
 				{19, 21}, 	{3, 15}, 	{23, 4}, 	{12, 19}, 	{2, 1},
