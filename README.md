@@ -15,7 +15,7 @@ To perform a simple matching using the simple (fast) approximate maximum-weighte
 
     MW.py -i /path/to/input_dir -o /path/to/output_file -dmz 0.025 -drt 100 
 
-To perform a full matching using the (slow) Hungarian maximum-weighted matching:
+To perform a full matching using the (slow) Hungarian maximum-weighted matching (not evaluated in the paper):
 
     MW.py -i /path/to/input_dir -o /path/to/output_file -dmz 0.025 -drt 100 -exact_match
 
