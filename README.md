@@ -10,7 +10,7 @@ To get help:
 
 MW.py -h
 
-To perform a simple matching using the simple (fast) approximate maximum-weighted matching:
+To perform a simple matching using the simple (fast) approximate maximum-weighted matching (MW):
 
 MW.py -i /path/to/input_dir -o /path/to/output_file -dmz 0.025 -drt 100 
 
