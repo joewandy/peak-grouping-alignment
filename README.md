@@ -7,24 +7,19 @@ This page contains the supporting files for the paper *Incorporating peak groupi
 ## Example usage
 
 To get help:
-
-MW.py -h
+    MW.py -h
 
 To perform a simple matching using the simple (fast) approximate maximum-weighted matching (MW):
-
-MW.py -i /path/to/input_dir -o /path/to/output_file -dmz 0.025 -drt 100 
+    MW.py -i /path/to/input_dir -o /path/to/output_file -dmz 0.025 -drt 100 
 
 To perform a full matching using the (slow) Hungarian maximum-weighted matching:
-
-MW.py -i /path/to/input_dir -o /path/to/output_file -dmz 0.025 -drt 100 -exact_match
+    MW.py -i /path/to/input_dir -o /path/to/output_file -dmz 0.025 -drt 100 -exact_match
 
 To group related peaks greedily (with 2 seconds grouping tolerance) and perform an approximate maximum-weighted matching incorporating the greedy grouping information for peaks being in the same group (MWG):
-
-MW.py -i /path/to/input_dir -o /path/to/output_file -dmz 0.025 -drt 100 -g -gm greedy -grt 2
+    MW.py -i /path/to/input_dir -o /path/to/output_file -dmz 0.025 -drt 100 -g -gm greedy -grt 2
 
 To group related peaks using mixture model clustering and perform an approximate maximum-weighted matching incorporating the posterior probabilities of peaks being in the same group (MWM):
-
-MW.py -i /path/to/input_dir -o /path/to/output_file -dmz 0.025 -drt 100 -g -gm posterior -grt 2
+    MW.py -i /path/to/input_dir -o /path/to/output_file -dmz 0.025 -drt 100 -g -gm posterior -grt 2
 
 ## Data format
 
