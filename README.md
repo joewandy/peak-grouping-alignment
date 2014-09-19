@@ -1,24 +1,28 @@
 # peak-grouping-alignment
 
-Supporting files for the work done on "Incorporating peak grouping information for alignment of multiple liquid chromatography-mass spectrometry datasets" can be found here.
+This page contains the supporting files for the paper *Incorporating peak grouping information for alignment of multiple liquid chromatography-mass spectrometry datasets* by Wandy et al. (2014).
 
-**MW_alignment** contains the main peak alignment (matching) code for the proposed MW/MWG/MWM method in the paper. The implementation is done in Python, and the main script is MW.py. 
+**MW_alignment** contains the main peak alignment (matching) code for the proposed methods (MW/MWG/MWM) method. The implementation is done in Python, and the main executable script is MW.py. 
 
 ## Example usage
 
+To get help:
+
+MW.py -h
+
 To perform a simple matching using approximate (fast) maximum-weighted matching:
 
-MW.py -i /path/to/directory/containing/input_files -o /path/to/output_file -dmz 0.025 -drt 100 
+MW.py -i /path/to/input_dir -o /path/to/output_file -dmz 0.025 -drt 100 
 
 To perform a full matching using Kuhn-Munkres maximum-weighted matching:
 
-MW.py -i /path/to/directory/containing/input_files -o /path/to/output_file -dmz 0.025 -drt 100 -exact_match
+MW.py -i /path/to/input_dir -o /path/to/output_file -dmz 0.025 -drt 100 -exact_match
 
-To group related peaks greedily (with 2 seconds grouping tolerance) and perform an approximate maximum-weighted matching that incorporates the greedy grouping information:
+To group related peaks greedily (with 2 seconds grouping tolerance) and perform an approximate maximum-weighted matching incorporating the greedy grouping information for peaks being in the same group (MWG):
 
 MW.py -i /path/to/input_dir -o /path/to/output_file -dmz 0.025 -drt 100 -g -gm greedy -grt 2
 
-To group related peaks using mixture model clustering and perform an approximate maximum-weighted matching that incorporates the posterior probability of peaks being in the same group:
+To group related peaks using mixture model clustering and perform an approximate maximum-weighted matching incorporating the posterior probabilities of peaks being in the same group (MWM):
 
 MW.py -i /path/to/input_dir -o /path/to/output_file -dmz 0.025 -drt 100 -g -gm posterior -grt 2
 
