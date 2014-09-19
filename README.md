@@ -2,7 +2,8 @@
 
 This page contains the supporting files for the paper *Incorporating peak grouping information for alignment of multiple liquid chromatography-mass spectrometry datasets* by Wandy et al. (2014).
 
-**MW_alignment** contains the main peak alignment (matching) code for the proposed methods (MW/MWG/MWM) method. The implementation is done in Python, and the main executable script is MW.py. 
+- **MW_alignment** contains the main peak alignment (matching) code for the proposed methods (MW/MWG/MWM) method. The implementation is done in Python, and the main executable script is MW.py.
+- **input_data** contains the dataset used in experiments to measure performance in the paper. Further explanation can be found inside that directory. 
 
 ## Example usage
 
@@ -39,7 +40,7 @@ E.g.
     72.54182358620366	1	218099.4595541399	1442.8666507643893
     73.04060164990388	1	2801.21866543637	1456.5747291123264
 
-Only files within with the extension .csv, .txt within input_dir are considered for alignment. The output file establish the correspondence of peaks in the input file. It has the format:
+Only files within with the extension .csv, .txt within *input_dir* are considered for alignment. The output file establish the correspondence of peaks in the input file. It has the format:
 
     correspondence_id   originating_filename    mass    rt
 
@@ -54,4 +55,4 @@ In this example, the two features with correspondence_id = 0 are matched togethe
 
 ## Performance evaluation
 
-To make evaluation easy, calls to MW.py can be invoked by a Java pipeline that reads input files in various formats and computes performance measures (Precision, Recall, F1) produced on the output produced by the script against some alignment ground truth. This pipeline can be found at https://github.com/joewandy/phd-research
+To make evaluation easy, calls to MW.py can be invoked by a Java pipeline that reads input files in various formats (.featureXML and SIMA format) and computes performance measures (Precision, Recall, F1) produced on the output produced by the script against user-defined alignment ground truth. This pipeline can be found at https://github.com/joewandy/phd-research
