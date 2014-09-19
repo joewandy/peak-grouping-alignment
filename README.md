@@ -54,4 +54,4 @@ In this example, the two features with correspondence_id = 0 are matched togethe
 
 ## Performance evaluation
 
-To make evaluation easy, calls to MW.py is wrapped within a Java pipeline that reads input files in various formats and computes performance measures (Precision, Recall, F1) produced on the output produced by the script against some alignment ground truth. This pipeline can be found at https://github.com/joewandy/phd-research
+To make evaluation easy, calls to MW.py can be invoked by a Java pipeline that reads input files in various formats and computes performance measures (Precision, Recall, F1) produced on the output produced by the script against some alignment ground truth. This pipeline can be found at https://github.com/joewandy/phd-research
