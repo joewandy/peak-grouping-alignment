@@ -25,12 +25,17 @@ class GreedyClustering:
         print " - Grouping " + self.alignment_file.filename
         sys.stdout.flush()
         
-        '''target = os.path.join(GreedyClustering.MATRIX_SAVE_PATH, self.alignment_file.filename + '.greedy.mat')
-        if os.path.isfile(target):
-            print "\tReading clustering from " + target
-            mdict = scipy.io.loadmat(target)
-            ZZ_all = mdict['ZZ_all']
-            return ZZ_all'''
+        if self.options.use_peakshape:
+            tol = '%.1f' % self.grt
+            front_part, extension = os.path.splitext(self.alignment_file.filename)
+            filename = front_part + '.greedy_peakshape.' + tol + '.mat'
+            target = os.path.join(GreedyClustering.MATRIX_SAVE_PATH, filename)
+            print target
+            if os.path.isfile(target):
+                print "\tReading peak shape clustering from " + target
+                mdict = scipy.io.loadmat(target)
+                ZZ_all = mdict['ZZ_all']
+                return ZZ_all
         
         rows = sorted(self.alignment_file.rows, key=lambda x: x.get_average_intensity(), reverse=True)
         N = len(rows)
@@ -55,6 +60,8 @@ class GreedyClustering:
                 n = row.row_id
                 Z[n, k] = 1
             k = k + 1
+
+        print " - " + str(k) + " groups obtained"
                 
         ZZ = Z.tocsr() * Z.tocsr().transpose()
         return ZZ.tolil()
@@ -91,7 +98,7 @@ class MixtureModelClustering:
         print " - Grouping " + self.alignment_file.filename
         sys.stdout.flush()
         
-        target = os.path.join(MixtureModelClustering.MATRIX_SAVE_PATH, self.alignment_file.filename + '.mat')
+        target = os.path.join(MixtureModelClustering.MATRIX_SAVE_PATH, self.alignment_file.filename + '.mixture_model_rt.mat')
         if os.path.isfile(target):
             print "\tReading clustering from " + target
             mdict = scipy.io.loadmat(target)

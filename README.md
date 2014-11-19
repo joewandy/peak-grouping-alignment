@@ -10,12 +10,21 @@ This page contains the supporting files for the paper *Incorporating peak groupi
 The program depends on the following Python library:
 
 - Numpy
-- Scipy
-- NetworkX
+- Scipy (0.14)
+- NetworkX (optional)
+- BLAS/OpenBLAS/Atlas for matrix multiplication
 
 In Ubuntu Linux, you can install them easily with the following commands:
 
-    sudo apt-get install python-numpy python-scipy python-networkx
+    sudo apt-get install python-numpy python-scipy python-networkx liblapack3
+
+On Fedora Linux, install the following:
+
+    sudo yum install scipy python-networkx lapack-devel blas-devel python-pip
+
+You might need to update scipy to the latest version (0.14) too. Do that from pip:
+
+    sudo pip install --upgrade scipy
 
 ## Example usage
 
