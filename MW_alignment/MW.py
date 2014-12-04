@@ -36,6 +36,8 @@ def get_options(argv):
     parser.set_defaults(use_group=False)
     parser.add_argument('-p', dest='use_peakshape', action='store_true', help='use peak shape correlations information?')
     parser.set_defaults(use_peakshape=False)    
+    parser.add_argument('-mcs', help='minimum correlations of peak shapes signal.')
+    parser.set_defaults(mcs=0.9)
     parser.add_argument('-gm', dest='grouping_method', help='grouping method. Choices are greedy, posterior')
     parser.set_defaults(grouping_method='posterior')
     parser.add_argument('-alpha', help='clustering weight ratio')
@@ -50,6 +52,8 @@ def get_options(argv):
     parser.set_defaults(burn_in=100)
     parser.add_argument('-s', dest='skip_matching', action='store_true', help='skip the matching stage, only do clustering')
     parser.set_defaults(skip_matching=False)
+    parser.add_argument('-always_recluster', dest='always_recluster', action='store_true', help='always initialise a new mixture model clustering instead of reading previously-cached results')
+    parser.set_defaults(always_recluster=False)
 
     # parse it
     options = parser.parse_args(argv)
