@@ -8,11 +8,9 @@ This page contains the supporting files for the paper *Incorporating peak groupi
 
 ## Checking out the whole project
 
-Use the following command to clone the whole repository
+Use the following command to clone the whole repository. This will give you all the executables, input_data and evaluation scripts used in the paper.
 
     git clone https://github.com/joewandy/peak-grouping-alignment.git
-
-This will give you all the executables, input_data and evaluation scripts used in the paper.
 
 ## Required libraries
 
