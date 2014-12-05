@@ -4,7 +4,7 @@ This page contains the supporting files for the paper *Incorporating peak groupi
 
 - **MW** contains the main peak alignment (matching) code for the proposed methods (MW/MWG/MWM) method. The implementation is done in Python, and the main executable script is MW.py.
 - **input_data** contains the dataset used in experiments to measure performance in the paper. Further explanation can be found inside that directory. 
-- **experiments** contains scripts to run the evaluation pipeline and do parameter scans.
+- **experiments** contains scripts to run the evaluation pipeline and do parameter scans. More details can be found inside that directory.
 
 ## Checking out the whole project
 
