@@ -5,30 +5,31 @@
 This directory contains the evaluation datasets used for experiments in the paper. Input files are provided either in SIMA format or in featureXML format. Within each dataset, the directory *ground_truth* contains the alignment ground truth as defined in the original paper that provides the datasets.
 
 * **P1** and **P2** contains the proteomic datasets used in single-fraction and multiple-fractions experiments in the paper.
-* **M1** contains the metabolomic dataset used for the metabolomic experiment in the paper.
+* **metabolomics** contains the metabolomic dataset used for the metabolomic experiment in the paper.  
 * **glycomics** contains the glyomic dataset used for the glycomic experiment in the paper.
+* **M1** contains the metabolomic dataset used for additional evaluation in the Supplementary.
 
-**P1**, **P2** and **M1** were first introduced by Lange, et al. (2008), while **glycomics** comes from Tsai et al. (2013). We focus on pairwise alignment performance, so only the first two runs within each fraction of P2 were included for evaluation. For **M1** and **glycomics**, we extracted 30 random pairs of runs to be the training set and further 30 random pairs of runs to be the testing set. Parameters are optimised on the training set and performance evaluated on the testing set. 
+**P1**, **P2** and **M1** were first introduced by Lange, et al. (2008), while **glycomics** comes from Tsai et al. (2013). **metabolomics** is our dataset of standard mixtures used for calibration of LC-MS machines. We focus on pairwise alignment performance, so only the first two runs within each fraction of P2 were included for evaluation. For **metabolomics** and **glycomics**, we extracted 30 random pairs of runs to be the training set and further 30 random pairs of runs to be the testing set. Parameters are optimised on the training set and performance evaluated on the testing set. 
 
 ## Files selection for the M1 and glycomic datasets
 
-Files in these directories are sorted alphabetically (in natural order) and indexed from 0 to n. The following lists the indices of files randomly selected in **M1** for training (parameter optimisation) and testing (performance evaluation) purposes.
+Files in these directories are sorted alphabetically (in natural order) and indexed from 0 to n. The following lists the indices of files randomly selected in **metabolomics** for training (parameter optimisation) and testing (performance evaluation) purposes.
 
 		int[][] trainingIndices = { 
-				{36, 40}, 	{5, 28}, 	{7, 43}, 	{22, 36}, 	{35, 41},
-				{2, 38}, 	{33, 34}, 	{8, 32}, 	{3, 5}, 	{14, 42},
-				{17, 34},	{20, 22}, 	{13, 34}, 	{6, 8}, 	{15, 26},
-				{12, 23},	{36, 40}, 	{12, 37}, 	{11, 41},	{5, 28},
-				{26, 37},	{13, 34},	{4, 25},	{35, 42},	{1, 21},
-				{11, 18}, 	{6, 42},	{3, 11},	{1, 2}, 	{29, 33}
+				{ 9, 10 }, 	{ 2, 7 }, 	{ 11, 2 }, 	{ 6, 9 }, 	{ 6, 4 }, 
+				{ 10, 1 }, 	{ 9, 5 }, 	{ 8, 1 }, 	{ 10, 2 }, 	{ 11, 1 },
+				{ 9, 3 }, 	{ 8, 9 }, 	{ 2, 8 }, 	{ 11, 4 }, 	{ 3, 9 }, 
+				{ 11, 10 }, { 3, 2 }, 	{ 7, 3 }, 	{ 7, 10 }, 	{ 9, 4 }, 
+				{ 1, 7 }, 	{ 7, 2 }, 	{ 6, 1 }, 	{ 9, 4 }, 	{ 3, 7 }, 
+				{ 5, 9 }, 	{ 11, 2 }, 	{ 10, 1 }, 	{ 1, 5 }, 	{ 2, 3 } 
 		};
-		int[][] testingIndices= {
-				{14, 35},	{12, 27}, 	{20, 33},	{7, 41},	{4, 44},
-				{1, 43},	{4, 39}, 	{19, 36}, 	{7, 12}, 	{25, 26},
-				{16, 28}, 	{4, 11},	{11, 19}, 	{22, 42},	{17, 40},
-				{14, 33},	{43, 7},	{4, 41},	{14, 20}, 	{22, 36},
-				{24, 36},	{25, 39},	{10, 14},	{9, 38},	{11, 20},
-				{9, 19},	{5, 20},	{12, 27},	{6, 10}, 	{19, 23}						
+		int[][] testingIndices = { 
+				{ 6, 4 }, 	{ 9, 2 }, 	{ 2, 5 }, 	{ 7, 11 }, 	{ 4, 10 }, 
+				{ 8, 2 }, 	{ 5, 7 }, 	{ 3, 8 }, 	{ 7, 9 }, 	{ 6, 9 },
+				{ 4, 6 }, 	{ 8, 9 }, 	{ 3, 7 }, 	{ 3, 10 }, 	{ 5, 11 }, 
+				{ 5, 4 },	{ 3, 9 }, 	{ 9, 6 }, 	{ 11, 6 }, 	{ 4, 8 }, 
+				{ 6, 10 }, 	{ 11, 2 },	{ 6, 1 }, 	{ 8, 9 }, 	{ 5, 10 }, 
+				{ 7, 8 }, 	{ 11, 1 }, 	{ 5, 3 }, 	{ 7, 5 }, 	{ 11, 4 } 
 		};
 
 The following lists the indices of files randomly selected in **glycomics** for training (parameter optimisation) and testing (performance evaluation) purposes.
@@ -50,3 +51,4 @@ The following lists the indices of files randomly selected in **glycomics** for 
 				{11, 23},	{10, 14},	{6, 17},	{10, 8}, 	{7, 19}						
 		};
 
+More details can be found in the Supplementary document.
