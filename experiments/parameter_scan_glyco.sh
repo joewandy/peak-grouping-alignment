@@ -1,12 +1,14 @@
 #!/bin/bash
 
-# run MW, SIMA and Join
-./run_glyco_tools.sh
+rm -rf results/glyco
 
-# run MWG, will take a long time since a lot of parameters to vary
-./run_glyco_mwg.sh
+# do parameter scans using MW, SIMA and Join
+./parameter_scan_glyco_tools.sh
 
-# run MWM, we can either reuse previous clustering results or redo the clustering from scratch
+# do parameter scans using MWG, will take a long time since a lot of parameters to vary
+./parameter_scan_glyco_mwg.sh
+
+# do parameter scans using MWM, we can either reuse previous clustering results or redo the clustering from scratch
 # see details in process_glyco_mixture.sh
-./run_glyco_mwm.sh
+./parameter_scan_glyco_mwm.sh
 
