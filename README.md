@@ -83,4 +83,4 @@ In this example, the two features with correspondence_id = 0 are matched togethe
 
 ## Experiments
 
-The Python scripts are wrapped inside a pipeline that loads the feature data, calls various alignment methods and calculate performance measures. More details, including ready-to-run scripts, can be found inside the **experiments** folder. 
+The Python scripts are wrapped inside a pipeline that loads the feature data, calls various alignment methods and calculate performance measures. More details, including ready-to-run scripts, can be found inside the [experiments](https://github.com/joewandy/peak-grouping-alignment/tree/master/experiments) folder. 
