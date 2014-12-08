@@ -5,7 +5,7 @@ To make evaluation easy, calls to MW.py can be invoked by a Java pipeline that r
 To reproduce key results from the paper, follow the steps:
 
 1. Download all the necessary files (executables, input_data) in this repository. **alignment.jar** is the main executable for the evaluation pipeline that loads the input files in either featureXML or SIMA format. Be sure not to change the relative paths of the input files and executables. We also include SIMA executable for evaluation purposes, while mzMine is already bundled inside alignment.jar.
-2. Go into this **experiments** folder
+2. Go into this **experiments** folder from the shell.
 3. For Proteomic results, execute the script **run_P1.sh** and **run_P2.sh**.
 4. For Glycomic results, execute the script **parameter_scan_glyco.sh** to do parameter scans (for Fig 3 & 4). This will take a while, especially for all 30 training-testing sets.
 5. For Metabolomic results, execute the script **parameter_scan_meta.sh** to do parameter scans (for Fig 3 & 4). This will take a long while for all 30 training-testing sets.
