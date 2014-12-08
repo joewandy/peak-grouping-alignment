@@ -1,6 +1,5 @@
 *.pyc
 error.txt
-*.mat
 *.zip
 .svn*
 *.pydevproject
