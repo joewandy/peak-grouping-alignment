@@ -80,3 +80,7 @@ E.g.
     1	synthdata_1.csv	70	158.09302110253617	878.1399446798514
 
 In this example, the two features with correspondence_id = 0 are matched together. Similarly, the last two peaks with correspondence_id = 1 are also matched together.
+
+## Experiments
+
+The Python scripts are wrapped inside a pipeline that loads the feature data, calls various alignment methods and calculate performance measures. More details, including ready-to-run scripts, can be found inside the **experiments** folder. 
